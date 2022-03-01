@@ -8,3 +8,6 @@ outputs:
   message:
     description: "Welcome message for you"
     value: "Hello ${{ inputs.your-name }}, how are you"
+runs:
+ - run: echo "Custom github action"
+   shell: bash 
