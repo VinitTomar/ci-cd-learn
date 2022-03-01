@@ -14,4 +14,4 @@ jobs:
         uses: ./.github/actions/hello-world-action
         with:
           your-name: 'Vinit Tomar'
-      - run: echo "Message:: ${{ steps.hw.outputs.message }}"
+      - run: echo "Message is ${{ steps.hw.outputs.message }}"
