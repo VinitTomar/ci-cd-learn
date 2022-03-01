@@ -9,5 +9,7 @@ outputs:
     description: "Welcome message for you"
     value: "Hello ${{ inputs.your-name }}, how are you"
 runs:
- - run: echo "Custom github action"
-   shell: bash 
+  using: "composite"
+  steps:
+    - run: echo "Custom github action."
+      shell: bash
