@@ -10,3 +10,8 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      - id: hw
+        uses: ./.github/actions/hello-world-action
+        with:
+          your-name: 'Vinit Tomar'
+      - run: echo "Message:: ${{ steps.hw.outputs.message }}"

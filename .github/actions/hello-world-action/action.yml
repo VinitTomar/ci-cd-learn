@@ -1,0 +1,10 @@
+name: hello world
+inputs:
+  your-name:
+    description: "Your name to say hello"
+    required: true
+    default: "world"
+outputs:
+  message:
+    description: "Welcome message for you"
+    value: "Hello ${{ inputs.your-name }}, how are you"
