@@ -7,10 +7,8 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-      - env:
-          GH_TOKEN: ${{ secrets.MY_TOKEN }}
-        run: |
-          gh auth login --with-token
+      - run: |
+          gh auth login --with-token ${{ secrets.MY_TOKEN }}
       - env:
           ISSUE_URL: ${{ github.event.issue.html_url }}
         run: |
