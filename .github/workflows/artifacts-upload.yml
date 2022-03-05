@@ -10,6 +10,8 @@ jobs:
           expr 1 + 1 > output.log
       - name: Print file
         run: cat output.log
+        run: pwd
+        run: ls
       - name: Upload output file
         uses: actions/upload-artifact@v3
         with:

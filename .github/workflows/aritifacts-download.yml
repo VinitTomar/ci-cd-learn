@@ -4,6 +4,7 @@ jobs:
   download-job:
     runs-on: ubuntu-latest
     steps:
+      - run: pwd
       - name: Download a single aritfact
         uses: actions/download-artifact@v3
         with:
