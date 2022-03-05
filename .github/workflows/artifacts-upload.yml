@@ -1,7 +1,7 @@
-name: Artifact upload download
+name: Artifact upload
 on: workflow_dispatch
 jobs:
-  example-job:
+  upload-job:
     runs-on: ubuntu-latest
     name: Save output
     steps:

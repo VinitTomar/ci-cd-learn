@@ -1,0 +1,12 @@
+name: Artifcat download example
+on: workflow_dispatch
+jobs:
+  download-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single aritfact
+        uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
+      - name: Print downloaded file
+        run: cat output.log
