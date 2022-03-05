@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pwd
-      - name: Download a single aritfact
+      - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
           name: output-log-file
