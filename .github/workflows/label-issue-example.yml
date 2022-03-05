@@ -9,6 +9,9 @@ jobs:
     steps:
       - env:
           GH_TOKEN: ${{ secrets.MY_TOKEN }}
+        run: |
+          gh auth login --with-token
+      - env:
           ISSUE_URL: ${{ github.event.issue.html_url }}
         run: |
           gh issue edit $ISSUE_URL --add-label "new"
