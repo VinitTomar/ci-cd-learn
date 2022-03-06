@@ -1,4 +1,4 @@
-Name: Job with output
+name: Job with output
 on: workflow_dispatch
 jobs:
   job1:
