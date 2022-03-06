@@ -26,3 +26,17 @@ jobs:
     steps:
       - name: Print the input tag to STDOUT
         run: echo The tag is ${{ github.event.inputs.tags }}
+
+jobs:
+  print-log-level:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the input log level to STDOUT
+        run: echo The tag is ${{ github.event.inputs.logLevel }}
+
+jobs:
+  print-environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the input choosen environment to STDOUT
+        run: echo The tag is ${{ github.event.inputs.environment }}
