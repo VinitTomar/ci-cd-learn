@@ -5,12 +5,24 @@ on:
       username:
         required: true
         type: string
+    outputs:
+      firstWord:
+        value: ${{ jobs.resuable_workflow_job.outputs.firstWord }}
+      secondWord:
+        value: ${{ jobs.resuable_workflow_job.outputs.secondWord }}
     secrets:
       envPAT:
         required: true
 jobs:
   resuable_workflow_job:
     runs-on: ubuntu-latest
+    outputs:
+      firstWord: ${{ steps.step1.outputs.firstWord }}
+      secondWord: ${{ steps.step2.outputs.secondWord }}
     steps:
       - run: echo username is ${{ inputs.username }}
       - run: echo envPAT is ${{ secrets.envPAT }}
+      - id: step1
+        run: echo "::set-output name=firstWord::Vinit"
+      - id: step2
+        run: echo "::set-output name=secondWord::Tomar"
