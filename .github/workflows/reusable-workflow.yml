@@ -12,5 +12,5 @@ jobs:
   resuable_workflow_job:
     runs-on: ubuntu-latest
     steps:
-      run: echo username is ${{ inputs.username }}
-      run: echo envPAT is ${{ secrets.envPAT }}
+      - run: echo username is ${{ inputs.username }}
+      - run: echo envPAT is ${{ secrets.envPAT }}
