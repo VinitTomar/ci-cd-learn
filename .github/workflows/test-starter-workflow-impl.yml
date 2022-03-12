@@ -1,0 +1,8 @@
+name: Test starter workflow implementation
+on:
+  workflow_dispatch
+jobs:
+  print-random:
+    runs-on: ubuntu-lates
+    steps:
+      - run: echo test starter workflow
