@@ -2,10 +2,10 @@ name: Execute resuable workflow
 on:
   workflow_dispatch
 jobs:
-  call_reusable_workflow
-  steps:
-    - uses: ./.github/workflows/workflow-2.yml
-      with:
-        username: Vinit
-      secrets:
-        envPAT: envPATValue
+  call_reusable_workflow:
+    steps:
+      - uses: ./.github/workflows/workflow-2.yml
+        with:
+          username: Vinit
+        secrets:
+          envPAT: envPATValue
