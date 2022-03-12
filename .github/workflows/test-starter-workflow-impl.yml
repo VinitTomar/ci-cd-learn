@@ -3,6 +3,6 @@ on:
   workflow_dispatch
 jobs:
   print-random:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
-      - run: echo test starter workflow
+      - run: echo printing.... random
