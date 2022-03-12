@@ -18,4 +18,5 @@ jobs:
           name: output-log-file
           path: output.log
   call-download-artifacts:
+    needs: upload-job
     uses: ./.github/workflows/aritifacts-download.yml
