@@ -1,0 +1,25 @@
+name: Build and Deploy
+
+on: workflow_dispatch
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build start
+        run: echo "building started..."
+      - name: Build in-progress
+        run: echo "building in progress...."
+      - name: Build done
+        run: echo "building completed :)"
+  Deploy:
+    needs: Build
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Deploy start
+        run: echo "deploy started..."
+      - name: deploy in-progress
+        run: echo "deploy in progress...."
+      - name: deploy done
+        run: echo "deploy completed :)"
